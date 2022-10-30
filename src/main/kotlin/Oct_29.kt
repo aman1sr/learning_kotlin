@@ -1,8 +1,9 @@
+import kotlin.coroutines.coroutineContext
 
- class Oct_29 {
+class Oct_29 {
 
     /* -------------------  functions ------------------- */
-    fun printMessage(message: String): Unit {
+    fun printMessage(message: String): Unit {       //  simple function — returns Unit (i.e., no return value).
         println(message)
     }
 
@@ -14,7 +15,7 @@
         return x + y
     }
 
-    fun multiply(x: Int, y: Int) = x * y
+    fun multiply(x: Int, y: Int) = x * y        // single-expression function
 
 
     /* -------------------  Variable & Null Safety ------------------- */
@@ -22,9 +23,11 @@
 
     val b: Int = 1
 
+               // lateinit: those variables that are guaranteed to be initialized in the future.
     lateinit var str: String
     lateinit var str2: String
 
+    /* kotlin don't allow variables assinemtn of null (directly) for Null safety , we can use ? that makes a varialbe nullable */
     var neverNull: String = "this string can't be null"
     var nullble: String? = "this string can be assigned as null"
 
@@ -41,10 +44,15 @@
     class Customer{
         var a : Int = 3
     }
-    class Contact(val id: Int, var email: String)
+    class Contact(val id: Int, var email: String)       // a class with two properties
 
 
     /* -------------------  Generics  ------------------- */
+    /*E is called the generic type parameter.
+    * compiler can infer the generic type from the parameters of mutableStackOf
+      so that you don't have to write mutableStackOf<Double>(...)
+    *
+    * */
     class MutableStack<E>(vararg items: E){
         private val elements = items.toMutableList()
         fun push(element: E) = elements.add(element)
@@ -59,6 +67,9 @@
 
     /* -------------------  Inheritace  ------------------- */
 
+    /*
+    * Kotlin classes & methods are final by default. to allow the class inheritance, mark the class with the openmodifier
+    * */
     open class Dog{
         open fun sayHello() {
             println("whof! whof!")
@@ -96,6 +107,15 @@ fun main() {
     println(obj.nullble)
     obj.nullble = null
     println(obj.nullble)
+
+    // calling lateInit
+
+//    println("lateInit1 : "+obj.str)       // will give error , since it's not initialized
+
+    obj.str2 = "lateInit initilized"
+    println("lateInit1: "+ obj.str2)
+
+
 
     var returnedStr = obj.describeString("yes man")
     println(returnedStr)
