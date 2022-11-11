@@ -1,7 +1,12 @@
 class Nov_4 {
 
     companion object {
-        val upperCase1: (String) -> String = {str: String -> str.uppercase()}
+
+        // Ideal case :::
+        // (Int) -> String  >>> means takes Integer & will return String
+        //     = {...}       >>>  main body of Lambda
+        //    no: Int -> ...  >>>  inside the {}body, tells let the Integer we recieved be no , & after   ->  symbol  return stuff
+        val upperCase1: (Int) -> String = {no: Int -> "str-$no"}
 
         val upperCase2= { str: String -> doit(str) }    // Type inference inside lambda  ( compiler automatically guessed it's String)
         private fun doit(str: String): String {
@@ -22,7 +27,7 @@ class Nov_4 {
 
 }
 fun main() {
-   println( Nov_4.upperCase1("hello"))
+   println( Nov_4.upperCase1(11))
    println( Nov_4.upperCase2("hello2"))
    println( Nov_4.upperCase3("hello3"))
    println( Nov_4.upperCase5("hello5"))

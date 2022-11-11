@@ -2,6 +2,11 @@
 
 ## what's New Learnt
 
+### Nov 11
+- Collection
+- Scope Function
+
+
 ### Nov 4
 - Lambda f()
 
