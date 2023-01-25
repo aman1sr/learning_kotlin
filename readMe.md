@@ -3,6 +3,11 @@
 - imp Extension [let,run,also,apply,with](https://www.digitalocean.com/community/tutorials/kotlin-let-run-also-apply-with)
 - 
 
+## Chap5_Inheritance
+- 
+
+## Chap2_StonePaperScissor_FirstHead.kt
+- beautiful use of f()
 
 ## Chap2_StonePaperScissor.kt
 - HashMap<key,value>
