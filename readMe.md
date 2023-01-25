@@ -4,7 +4,7 @@
 - 
 
 ## Chap5_Inheritance
-- 
+- Animal inheritance ( super class, subclass, override)
 
 ## Chap2_StonePaperScissor_FirstHead.kt
 - beautiful use of f()
