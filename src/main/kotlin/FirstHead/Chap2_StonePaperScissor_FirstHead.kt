@@ -3,12 +3,10 @@ package FirstHead
 
 fun main() {
 
-
     val options = arrayOf("Rock", "Paper", "Scissors")
     val gameChoice = getGameChoise(options)
     val userChoice = getUserChoise(options)
     printResult(gameChoice,userChoice)
-
 }
 
 fun printResult(gameChoice: String, userChoice: String) {

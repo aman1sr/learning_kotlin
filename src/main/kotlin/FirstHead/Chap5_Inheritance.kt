@@ -13,9 +13,8 @@ fun main() {
     val hippo = Hippo()
     vet.giveShot(wolf)
     vet.giveShot(hippo)
-
-
 }
+
 open class Animal{
     open val image = ""
     open val food = ""

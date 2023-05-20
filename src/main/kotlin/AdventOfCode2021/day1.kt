@@ -6,6 +6,13 @@ import java.io.InputStream
 
 /* to find :  measurements are larger than the previous measurement */
 
+/*
+* windowed: list.windowed(3) creates a sliding window of size 3
+*       eg -- val list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+              val count = list.windowed(3).count { it[0] < it[2] }
+              producing the following windows: [1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6], [5, 6, 7], [6, 7, 8], and [7, 8, 9].
+*
+* */
 
 fun main() {
 
@@ -36,7 +43,6 @@ fun main() {
     * */
     fun realKotlinStuff(list: List<Int>): Int {
         return list.windowed(3).count { it[0]< it[3] }
-
     }
 
     fun calculating2(list: List<Int>): Int{

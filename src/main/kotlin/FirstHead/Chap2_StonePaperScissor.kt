@@ -1,10 +1,10 @@
 package FirstHead
 
 fun main() {
-
 //    val rock: Int = 1
 //    val paper : Int = 2
 //    val scissor : Int = 3
+
     val game = HashMap<String,Int>()
     game.put("rock",0)
     game.put("paper",1)
@@ -12,7 +12,7 @@ fun main() {
     println("Please enter one of the following: Rock Paper Scissors")
 
     /* Testing Hash Map functionality */
-//    hashMapTesting( game)
+//    hashMapTesting(game)
 
     /*
     *    READ INPUT FROM USER
@@ -27,7 +27,6 @@ fun main() {
     * */
 
     playGame(game)
-
 }
 
 private fun playGame(game: HashMap<String, Int>) {
@@ -45,8 +44,7 @@ private fun playGame(game: HashMap<String, Int>) {
         playGame(game)
     }
 
-    println(
-        "you chose ${game.keys.elementAt(userInputNO)}. i chose ${game.keys.elementAt(computerInput)}. ${
+    println("you chose ${game.keys.elementAt(userInputNO)}. i chose ${game.keys.elementAt(computerInput)}. ${
             calculateGameResult(
                 game,
                 computerInput,
@@ -71,7 +69,6 @@ return strResult
 }
 
 fun askPlayAgain(game: HashMap<String, Int>) {      // todo: appropriately use playgain()
-
     println("Do you wanted to play again? press y/n")
     val input = readLine()!!
     if(input.equals('y') || input.equals('Y'))

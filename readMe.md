@@ -3,7 +3,17 @@
 - imp Extension [let,run,also,apply,with](https://www.digitalocean.com/community/tutorials/kotlin-let-run-also-apply-with)
 - 
 
-## Chap6_Chap6_Polymorphism
+
+## Chap11_Lambda
+- A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression.
+- An anonymous function is a function that is not stored in a program file, but is associated with a variable whose data type is function_handle
+- 
+
+
+## Chap10_Generic
+- 
+
+## Chap6_Polymorphism
 - Animal Class built using Interface & Abstract Class (Animal class inheritance tree) 
 
 ## Chap5_Inheritance
