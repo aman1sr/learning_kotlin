@@ -28,7 +28,8 @@ implement all abstract properties and functions.
 * a class can implement multiple interfaces, but can only inherit from a single direct superclass
 * Interface functions can be abstract or concrete
 * Restriction:
-    * Unlike properties in abstract classes, properties that are defined in an interface can’t store state,and therefore can’t be initialized. You can, however, return a value for a property by defining a custom getter
+    * Unlike properties in abstract classes, properties that are defined in an interface can’t store state,
+           and therefore can’t be initialized. You can, however, return a value for a property by defining a custom getter
     * Interface properties don’t have backing fields ( ie can't define custom setters)
 *
 * */

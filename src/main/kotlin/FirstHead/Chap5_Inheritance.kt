@@ -1,6 +1,24 @@
 package FirstHead
 
 /*p-265*/
+
+/*
+* [p-252] to stop a function or property from being overridden further down the class hierarchy, you can prefix it with final.
+* [p-258] When you call a function on an object reference, you’re calling the most
+          specific version of the function for that object type: the one that’s lowest on the inheritance tree
+*
+* When you call a function on the variable, it’s the object’s version that responds
+*       When the eat function gets called, it’s the version that’s in the Wolf class that responds.
+
+            val animal: Animal = Wolf()
+            animal.eat()
+
+* Polymorphism means “many forms”. It allows different subclasses to have different implementations of the same function
+*   Being able to use one type of object in a place that explicitly expects a different type is called polymorphism.
+*       It’s the ability to provide different implementations for functions that have been inherited from somewhere else
+*
+*
+* */
 fun main() {
 
     val animals = arrayOf(Hippo(), Wolf())
@@ -11,6 +29,12 @@ fun main() {
     val vet = Vet()
     val wolf  = Wolf()
     val hippo = Hippo()
+    wolf.hunger = 11
+    println("wolf has a hunger of ${wolf.hunger}")
+    /*
+    *  Since Hippo is a subclass of Animal,
+    *       it's Obj can be passed as an argument to a function that expects an Animal parameter.
+    * */
     vet.giveShot(wolf)
     vet.giveShot(hippo)
 }
@@ -73,7 +97,7 @@ class Wolf : Canine() {
 }
 
 class Vet {
-    fun giveShot(animal: Animal) {
+    fun giveShot(animal: Animal) {      // This allows any object of type Animal or its subclasses to be passed as an argument.
         animal.makeNoise()
     }
 }

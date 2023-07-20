@@ -1,13 +1,14 @@
 ## Extension Function
-- Extension functions allow you to add new functions to existing classes without modifying their source code. You can extend classes from both your own code and from external libraries.
+- Extension functions allow you to add new functions to existing classes without modifying their source code. 
+            You can extend classes from both your own code and from external libraries.
+- Extension functions are defined outside the class they extend but can be called as if they were member functions of that class. 
+            This provides a convenient way to add new behavior 
+- Extension functions are defined using the fun keyword followed by the type you want to extend, a dot, and the name of the function. 
+             Inside the extension function, you can access the properties and methods of the class you're extending using the this keyword.
+- Extension functions can be called on instances of the class they extend just like regular member functions. 
+             The compiler handles the dispatching of the function call based on the declared type of the object. 
+             This means you can invoke the extension function on any object of the extended class, even if the function was defined elsewhere.
 
-- Extension functions are defined outside the class they extend but can be called as if they were member functions of that class. This provides a convenient way to add new behavior or utility functions to classes without cluttering their original implementation.
-
-- Extension functions are defined using the fun keyword followed by the type you want to extend, a dot, and the name of the function. Inside the extension function, you can access the properties and methods of the class you're extending using the this keyword.
-
-- Extension functions can be called on instances of the class they extend just like regular member functions. The compiler handles the dispatching of the function call based on the declared type of the object. This means you can invoke the extension function on any object of the extended class, even if the function was defined elsewhere.
-
-- Extension functions promote code reusability and improve code readability. They allow you to define common operations or utility functions once and apply them to multiple instances of a class. This helps in writing concise and expressive code, making it easier to understand and maintain.
 
 ### NOTE:
 - all scope functions in Kotlin (let, run, with, apply, and also) are implemented as extension functions. They are defined as extension functions on the Any class, which is the root of the Kotlin class hierarchy.

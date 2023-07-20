@@ -1,8 +1,10 @@
 ## Higher Order Functions:
 - A higher-order function is a function that takes one or more functions as parameters or returns a function as its result. 
-- It treats functions as first-class citizens, allowing you to pass them around, store them in variables, and return them from other functions. 
-- Higher-order functions enable you to write more flexible and reusable code by abstracting away common patterns or behaviors. 
+            It treats functions as first-class citizens, allowing you to pass them around, store them in variables, and return them from other functions. 
 - They can accept lambda expressions or function references as arguments, making it easier to write concise and expressive code.
+- several higher-order functions that accept lambda expressions as arguments. 
+      eg - filter, map , reduce, forEach, groupBy, associateBy 
+
 
 ### also{} only Scope f() as HOF
 - scope functions in Kotlin (let, run, with, apply, and also), the also{} function is the one that can be considered a higher-order function

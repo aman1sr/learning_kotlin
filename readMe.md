@@ -1,6 +1,6 @@
 ### Todo:
 - Reflection [kotlin](https://kotlinlang.org/docs/reflection.html) , [StackOverFlow](https://stackoverflow.com/questions/47400942/what-does-mean-in-kotlin#:~:text=Since%20kotlin%201.1%2C%20in%20addition,the%20receiver%20as%20below...)
-- 
+- lazy
 
 
 
@@ -14,7 +14,9 @@
 - Fun_nullCheck.kt
 
 ### collection
-- Collection_list_map.kt
+- Collection_list.kt
+- Collection_split.kt
+- Collection_map.kt
 
 ### extensionFunction
 - 
