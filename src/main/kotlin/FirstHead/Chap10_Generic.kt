@@ -25,7 +25,7 @@ fun main() {
     val topCat = catContest.getWinners().first()
     println("Cat contest winner is:${topCat.name}")     // << test
 
-    /* Contest of PET */
+    /* Contest of PET (Abstract class) : here it's all grp of subClasses can participate */
     val petContest = Contest<Pet>()
     petContest.addScore(catFuzz, 50)
     petContest.addScore(fishFinny, 56)
@@ -66,8 +66,6 @@ class Fish(name: String): Pet(name)
 * but If we create a Contest<Cat> that deals with Cat contestants,
 *   the scores property’s type will become MutableMap<Cat, Int>,
 *       the compiler will automatically infer that any Contest object
-*
-*
 * */
 class Contest<T: Pet>{
     val scores: MutableMap<T,Int> = mutableMapOf()

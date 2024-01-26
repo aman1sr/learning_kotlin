@@ -1,5 +1,7 @@
 package basics
 
+import collection.testSplitBasics
+
 class Oct_29 {
 
     /* -------------------  functions ------------------- */
@@ -87,6 +89,7 @@ class Oct_29 {
 }
 
 fun main() {
+
     val obj = Oct_29()
     /* -------------------  functions  ------------------- */
     obj.printMessage("Oct is great")

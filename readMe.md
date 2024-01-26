@@ -1,10 +1,11 @@
 ### Todo:
-- Reflection [kotlin](https://kotlinlang.org/docs/reflection.html) , [StackOverFlow](https://stackoverflow.com/questions/47400942/what-does-mean-in-kotlin#:~:text=Since%20kotlin%201.1%2C%20in%20addition,the%20receiver%20as%20below...)
-- lazy
+-     for((index,c) in input.withIndex()){
+- filterIsInstance
+- 
 
 
 
-### AdventOfCode2021
+### adventOfCode2021
 - day1.kt
 - day2.kt
 - day3.kt

@@ -4,35 +4,27 @@ private const val CONVERT_CENTIGRADE_TO_FARENHEIT = "CentigradeToFarenheit"
 private const val CONVERT_POUNDS_TO_USTONS = "PoundsToUsTons"
 
 fun main() {
-//    test1()
-    test1_1()
-//    test2()
-//    test3()
 
+//    basicsInvocation()
+//      singleParameterCase()
+    usingLambdaAsParameter()
+//    usingLambdaAsReturnTypeAlias()
 
 }
+
 /*
-* NOTE:
-*   -for a Single parameterer we can use it, can only use the it syntax in situations where the compiler can infer the type of the parameter
-*       eg >> val addFive: (Int) -> Int = { it + 5 }
-*       { it + 5 } is equivalent to { x -> x + 5 },
-*
-*   -Use Unit to say a lambda has no return value
-*       eg >> val myLambda: () -> Unit = { println("Hi!") }
-*
-*
-*
+*  for a Single parameterer we can use it, can only use the it syntax in situations where the compiler can infer the type of the parameter
 * */
-fun test1_1() {
+fun singleParameterCase() {
     val addSeven: (Int) -> Int = { it + 7}
-    val addSum: (Int, Int) -> Int = {x, y -> x+y }
-
     println("adding 5 to Seven: ${addSeven(5)}")
-    println("adding 3 & 4: ${addSum(3, 4)}")
 
+    val addSum: (Int, Int) -> Int = {x, y -> x+y }
+    println("adding 3 & 4: ${addSum(3, 4)}")
 }
 
-fun test3() {
+
+fun usingLambdaAsReturnTypeAlias() {
     // convert 2.5kg to Pounds
     println("Convert 2.5kg to Pounds: ${getConversionLambda(CONVERT_KGS_TO_POUNDS)(2.5)}")
 
@@ -49,6 +41,11 @@ fun test3() {
 
 
 }
+/*
+* A type alias lets you provide an alternative name for an existing type, which you
+* can then use in your code. This means that if your code uses a function type such
+* as (Double) -> Double, you can define a type alias that’s used in its place,
+* */
 typealias DoubleConversion = (Double) -> Double
 fun convert3(x: Double, converter: DoubleConversion) : Double{
     val result = converter(x)
@@ -73,41 +70,54 @@ fun combine(lambda1: DoubleConversion, lambda2: DoubleConversion) : DoubleConver
     return {x: Double -> lambda2(lambda1(x))}
 }
 
-fun test2() {
+fun usingLambdaAsParameter() {
 
-    convert(20.0,{ it * 1.8 + 32})      // invoking lambda in the body (fav)
-//    convert(20.0){ it * 1.8 + 32}         // same as ab.  | invoking outside the body
-    convertFive { it * 1.8 + 32 }
+   val result = convert(20.0,{ it * 1.8 + 32})      // invoking lambda in the body  ,  convert(20.0){ it * 1.8 + 32}    same as ab.  | invoking outside the body (like it)
+    println("lambda result1 : $result")
+
+    convertFive { it * 1.8 + 32 }       // convertFive()  is taking a lambda f() as a parameter , which isn't returning anything
+
+    mastiKiPaathshala {    // flow of code will stop from convertSix() & come here here in Lambda block{ } & again exeute convertSix() left lines (but gennerally we don't)
+       println("masti yuu hi chaleegi ${it * 5}")
+    }
 }
 
-/*the converter here represent the Lambda, via Which we could (input & take return as an output) */
+/*the converter here represent the Lambda function, of type converter: (Double)-> Double)
+*  means the convert function wants the converter() to do calc & return back something,,
+*   so the flow of code is back in convert()
+*  */
 fun convert(x: Double, converter: (Double)-> Double): Double{
     val result = converter(x)
     println("$x is converted to $result")
 
     return result
 }
-fun convertFive(converter: (Int) -> Double) : Double{
+
+fun convertFive(converter: (Int) -> Double) : Unit{
     val result = converter(5)
     println("4 is converted to $result")
-    return result
 }
 
-private fun test1() {
+fun mastiKiPaathshala(mastiActivated: (Double) -> Unit): Unit{
+    println("Masti started")
+    mastiActivated(2.0)
+    println("is Masti paused???")           // ok AFter we excuted lambda block ,, the rest of the code in mastiKiPaathshala() will also flow like normal
+
+}
+
+private fun basicsInvocation() {
     var addFive = { x: Int -> x + 5 }
     println("Pass 6 to add Five : ${addFive(6)}")
 
 
-
     val addInts = { x: Int, y: Int -> x + y }
-    val result = addInts.invoke(6, 7)               // use invoke to use Lambda,, when using it in an Expression
+    val result = addInts.invoke(6, 7)               // use invoke to use Lambda, when using it in an Expression
     println("Pass 6,7 to addInts: $result")
     println("Pass 2,3 to addInts: ${addInts(2,3)}")
 
     val intLambda: (Int, Int) -> Int = { x, y -> x * y }
     println("pass 10,11 to intLambda: ${intLambda(10, 11)}")
-
-    val addSeven: (Int) -> Int = { it + 7 }                 // my Fav style
+    val addSeven: (Int) -> Int = { it + 7 }                 // my Fav style for single parameter
     println("Pass 12 to addSeven: ${addSeven(12)}")
 
     val myLamda: () -> Unit = { println("hello") }

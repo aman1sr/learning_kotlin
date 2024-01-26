@@ -1,0 +1,4 @@
+package plusUltra
+
+class anonymousClass {
+}
