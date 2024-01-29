@@ -17,8 +17,15 @@ fun main() {
 //    day9()
 
 //    day10()
-    day11()
+//    day11()
 
+    day12()
+}
+
+fun day12() {
+    println(17 == maxArea(intArrayOf(2,3,4,5,18,17,6)))
+    println(49 == maxArea(intArrayOf(1,8,6,2,5,4,8,3,7)))
+    println(1 == maxArea(intArrayOf(1,1)))
 }
 
 fun day11() {

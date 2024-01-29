@@ -1,4 +1,6 @@
 .
+###         val b = (right-left).absoluteValue           // to get NON -ve no.
+
 ## count = 2 , to convert it into '2' char so can store in arrayListOf<Char>()
                 ch.add(count.toString()[0])
                 butt,, only good to add single digit no.
