@@ -13,13 +13,36 @@ fun main() {
 //day5()
 //day6()
 //    day7()
-    day8()
-    day9()
+//    day8()
+//    day9()
 
+//    day10()
+    day11()
 
 }
 
+fun day11() {
+println(isSubsequence("abc","ahbgdc"))
+println(isSubsequence("axc","ahbgdc"))
+}
+
+fun day10() {
+    println(moveZeroes(intArrayOf(0,1,0,3,12)))
+
+    println(moveZeroes(intArrayOf(2,1)))
+    println(moveZeroes(intArrayOf(1,0)))
+
+    println(moveZeroes(intArrayOf(0,3,1)))
+
+    println(moveZeroes(intArrayOf(0)))
+}
+
 fun day9() {
+    println(6 == compress(charArrayOf('a','a','b','b','c','c','c')))
+    println(1 == compress(charArrayOf('a')))
+    println(4 == compress(charArrayOf('a','b','b','b','b','b','b','b','b','b','b','b','b')))
+    println("---------------sol-------------------")
+ 
 
 }
 
