@@ -19,7 +19,15 @@ fun main() {
 //    day10()
 //    day11()
 
-    day12()
+//    day12()
+    Qn13()
+}
+
+fun Qn13() {
+    println(2 == maxOperations(intArrayOf(2,2,2,3,1,1,4,1), 4))
+    println(2 == maxOperations(intArrayOf(4,4,1,3,1,3,2,2,5,5,1,5,2,1,2,3,5,4), 2))
+    println(1 == maxOperations(intArrayOf(3,1,3,4,3), 6))
+    println(2 == maxOperations(intArrayOf(1, 2, 3, 4), 5))
 }
 
 fun day12() {
