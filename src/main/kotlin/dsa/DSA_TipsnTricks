@@ -1,4 +1,22 @@
 .
+
+
+
+##     fun isVowel(c: Char): Int {
+          if ("aeiou".contains(c)) return 1
+          else return 0  }
+                         Vs
+       fun `fun`(c: Char): Int {
+           return if (c == 'a' || c == 'e' || c == 'i' || c == 'u' || c == 'o') 1 else 0
+       }
+>> fun(c: Char), is generally more efficient,
+- The first function, isVowel(c: Char), involves iterating through a string ("aeiou") to check if it contains the character.
+- The first function creates a string ("aeiou") each time it's called, which involves memory allocation and potential garbage collection overhead.
+- The second function, fun(c: Char), directly compares the character to each vowel using individual comparisons.
+- Direct comparisons are usually faster than string iterations, especially for smaller sets of characters like vowels.
+
+
+
 ###         val b = (right-left).absoluteValue           // to get NON -ve no.
 
 ## count = 2 , to convert it into '2' char so can store in arrayListOf<Char>()

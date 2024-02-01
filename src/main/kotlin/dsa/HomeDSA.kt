@@ -20,44 +20,169 @@ fun main() {
 //    day11()
 
 //    day12()
-    Qn13()
+//    Qn13()
+
+//    Qn14()
+    Qn16()
+}
+
+fun Qn16() {
+    /*
+    * Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
+    * */
+    println(2 == maxVowels("aeiou", 2))
+
+    println(3 == maxVowels("abciiidef", 3))
+
+    println(2 == maxVowels("leetcode", 3))
+
+}
+
+fun Qn14() {
+    /*
+    * You are given an integer array nums consisting of n elements, and an integer k.
+    *   Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value
+    * */
+    println(3.33333 == findMaxAverage(intArrayOf(3, 3, 4, 3, 0), 3))
+
+    println(
+        -594.58065 == findMaxAverage(
+            intArrayOf(
+                8860,
+                -853,
+                6534,
+                4477,
+                -4589,
+                8646,
+                -6155,
+                -5577,
+                -1656,
+                -5779,
+                -2619,
+                -8604,
+                -1358,
+                -8009,
+                4983,
+                7063,
+                3104,
+                -1560,
+                4080,
+                2763,
+                5616,
+                -2375,
+                2848,
+                1394,
+                -7173,
+                -5225,
+                -8244,
+                -809,
+                8025,
+                -4072,
+                -4391,
+                -9579,
+                1407,
+                6700,
+                2421,
+                -6685,
+                5481,
+                -1732,
+                -8892,
+                -6645,
+                3077,
+                3287,
+                -4149,
+                8701,
+                -4393,
+                -9070,
+                -1777,
+                2237,
+                -3253,
+                -506,
+                -4931,
+                -7366,
+                -8132,
+                5406,
+                -6300,
+                -275,
+                -1908,
+                67,
+                3569,
+                1433,
+                -7262,
+                -437,
+                8303,
+                4498,
+                -379,
+                3054,
+                -6285,
+                4203,
+                6908,
+                4433,
+                3077,
+                2288,
+                9733,
+                -8067,
+                3007,
+                9725,
+                9669,
+                1362,
+                -2561,
+                -4225,
+                5442,
+                -9006,
+                -429,
+                160,
+                -9234,
+                -4444,
+                3586,
+                -5711,
+                -9506,
+                -79,
+                -4418,
+                -4348,
+                -5891
+            ), 93
+        )
+    )
+    println(2.00000 == findMaxAverage(intArrayOf(0, 1, 1, 3, 3), 4))
+    println(12.75 == findMaxAverage(intArrayOf(1, 12, -5, -6, 50, 3), 4))
 }
 
 fun Qn13() {
-    println(2 == maxOperations(intArrayOf(2,2,2,3,1,1,4,1), 4))
-    println(2 == maxOperations(intArrayOf(4,4,1,3,1,3,2,2,5,5,1,5,2,1,2,3,5,4), 2))
-    println(1 == maxOperations(intArrayOf(3,1,3,4,3), 6))
+    println(2 == maxOperations(intArrayOf(2, 2, 2, 3, 1, 1, 4, 1), 4))
+    println(2 == maxOperations(intArrayOf(4, 4, 1, 3, 1, 3, 2, 2, 5, 5, 1, 5, 2, 1, 2, 3, 5, 4), 2))
+    println(1 == maxOperations(intArrayOf(3, 1, 3, 4, 3), 6))
     println(2 == maxOperations(intArrayOf(1, 2, 3, 4), 5))
 }
 
 fun day12() {
-    println(17 == maxArea(intArrayOf(2,3,4,5,18,17,6)))
-    println(49 == maxArea(intArrayOf(1,8,6,2,5,4,8,3,7)))
-    println(1 == maxArea(intArrayOf(1,1)))
+    println(17 == maxArea(intArrayOf(2, 3, 4, 5, 18, 17, 6)))
+    println(49 == maxArea(intArrayOf(1, 8, 6, 2, 5, 4, 8, 3, 7)))
+    println(1 == maxArea(intArrayOf(1, 1)))
 }
 
 fun day11() {
-println(isSubsequence("abc","ahbgdc"))
-println(isSubsequence("axc","ahbgdc"))
+    println(isSubsequence("abc", "ahbgdc"))
+    println(isSubsequence("axc", "ahbgdc"))
 }
 
 fun day10() {
-    println(moveZeroes(intArrayOf(0,1,0,3,12)))
+    println(moveZeroes(intArrayOf(0, 1, 0, 3, 12)))
 
-    println(moveZeroes(intArrayOf(2,1)))
-    println(moveZeroes(intArrayOf(1,0)))
+    println(moveZeroes(intArrayOf(2, 1)))
+    println(moveZeroes(intArrayOf(1, 0)))
 
-    println(moveZeroes(intArrayOf(0,3,1)))
+    println(moveZeroes(intArrayOf(0, 3, 1)))
 
     println(moveZeroes(intArrayOf(0)))
 }
 
 fun day9() {
-    println(6 == compress(charArrayOf('a','a','b','b','c','c','c')))
+    println(6 == compress(charArrayOf('a', 'a', 'b', 'b', 'c', 'c', 'c')))
     println(1 == compress(charArrayOf('a')))
-    println(4 == compress(charArrayOf('a','b','b','b','b','b','b','b','b','b','b','b','b')))
+    println(4 == compress(charArrayOf('a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b')))
     println("---------------sol-------------------")
- 
+
 
 }
 
@@ -65,8 +190,8 @@ fun day8() {
 //    println(increasingTriplet(intArrayOf(1, 2, 3, 4, 5, 6)))
 //    println(increasingTriplet(intArrayOf(2, 1, 5, 0, 4, 6)))
 //    println(increasingTriplet2(intArrayOf(2,1,5,0,4,6)))
-    println(increasingTripletSol(intArrayOf(20,100,10,12,5,13)))
-    println(increasingTripletSol(intArrayOf(1,2,1,3)))
+    println(increasingTripletSol(intArrayOf(20, 100, 10, 12, 5, 13)))
+    println(increasingTripletSol(intArrayOf(1, 2, 1, 3)))
 
 }
 
