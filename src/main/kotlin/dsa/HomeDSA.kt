@@ -23,7 +23,16 @@ fun main() {
 //    Qn13()
 
 //    Qn14()
-    Qn16()
+//    Qn16()
+    Qn17()
+}
+
+fun Qn17() {
+    /*
+    * Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+    * */
+    println(6 == longestOnes(intArrayOf(1,1,1,0,0,0,1,1,1,1,0),2))
+    println(10 == longestOnes(intArrayOf(0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1),3))
 }
 
 fun Qn16() {
