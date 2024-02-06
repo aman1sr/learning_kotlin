@@ -24,13 +24,31 @@ fun main() {
 
 //    Qn14()
 //    Qn16()
-    Qn17()
+//    Qn17()
+    Qn18()
+    // todo: 2 Qns more Sliding window : (https://leetcode.com/problems/maximum-students-taking-exam/description/)
+    //                                  (https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant/description/)
+
+    Qn19()
+}
+
+class Qn19 {
+
+}
+
+fun Qn18() {
+    println(3== longestSubarray(intArrayOf(0,1,1,1)))
+    println(0== longestSubarray(intArrayOf(0,0,0)))
+    println(3== longestSubarray(intArrayOf(1,1,0,1)))
+    println(5== longestSubarray(intArrayOf(0,1,1,1,0,1,1,0,1)))
+    println(2== longestSubarray(intArrayOf(1,1,1)))
 }
 
 fun Qn17() {
     /*
     * Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
     * */
+    println(5 == longestOnes(intArrayOf(1,1,1,0,0,0,1),2))
     println(6 == longestOnes(intArrayOf(1,1,1,0,0,0,1,1,1,1,0),2))
     println(10 == longestOnes(intArrayOf(0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1),3))
 }

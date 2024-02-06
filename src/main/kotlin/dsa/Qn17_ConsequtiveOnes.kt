@@ -12,27 +12,27 @@ import kotlin.math.max
 5) Continue the process until the right pointer reaches the end of the array.
 6) Return the maximum length of a subarray with at most k zeros.
 *
-* java Sol2: approch same, exe diff(https://leetcode.com/problems/max-consecutive-ones-iii/solutions/4593524/simple-java-code-using-sliding-window-beats-100)
-*
+* java Sol2: more Eff:
+*          todo: understand the flow (https://leetcode.com/problems/max-consecutive-ones-iii/solutions/3540704/solution)
 * */
 
-fun longestOnes(nums: IntArray, k: Int): Int {
-    // 1,1,1,0,0,0,1,1,1,1,0
-    var l = 0
-    var r = 0
-    var countZero=0
-    var maxCount = 0
-    while (r < nums.size) {
-        if(nums[r]==0) countZero++
-        while (countZero > k) {
-            if(nums[l]==0) countZero--
-             l++
-        }
-         maxCount = max(maxCount,r-l+1)
-        r++
-    }
-    return maxCount
-}
+//fun longestOnes(nums: IntArray, k: Int): Int {
+//    // 1,1,1,0,0,0,1,1,1,1,0
+//    var l = 0
+//    var r = 0
+//    var countZero=0
+//    var maxCount = 0
+//    while (r < nums.size) {
+//        if(nums[r]==0) countZero++
+//        while (countZero > k) {
+//            if(nums[l]==0) countZero--
+//             l++
+//        }
+//         maxCount = max(maxCount,r-l+1)
+//        r++
+//    }
+//    return maxCount
+//}
 
 
 //fun longestOnes(nums: IntArray, k: Int): Int {
@@ -55,3 +55,24 @@ fun longestOnes(nums: IntArray, k: Int): Int {
 //    }
 //    return maxOnes
 //}
+
+
+fun longestOnes(nums: IntArray, k: Int): Int {
+    // 0,0,1,1,0,,0,1,1,1,0,1,1,0,0,0,1,1,1,1
+    var start = 0
+    var end = 0
+    var zeros = 0
+    while (end < nums.size) {
+        if (nums[end] == 0) {
+            zeros++
+        }
+        end++
+        if (zeros > k) {
+            if (nums[start] == 0) {
+                zeros--
+            }
+            start++
+        }
+    }
+    return end - start
+}
