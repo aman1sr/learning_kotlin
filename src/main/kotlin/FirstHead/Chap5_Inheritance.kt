@@ -20,8 +20,7 @@ package FirstHead
 *
 * */
 fun main() {
-
-    val animals = arrayOf(Hippo(), Wolf())
+    val animals: Array<Animal> = arrayOf(Hippo(), Wolf())
     for (item in animals) {
         item.roam()
         item.eat()

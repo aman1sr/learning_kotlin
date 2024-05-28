@@ -1,8 +1,15 @@
 package FirstHead
+/*
+* working : (https://chat.openai.com/share/8dd195b7-dc44-41e5-a2b8-a4e9fd5aba76)
+* */
 
 fun main() {
-    val dogRetailer: Retailer<Dog> = DogRetailer()
+    val dogRetailer: Retailer<Dog> = DogRetailer()          //  Liskov Substitution Principle, which states that a subtype should be usable wherever a supertype is expected.
     dogRetailer.sell()
+//    dogRetailer.checkIff()       // unable to access
+    val dogRetailer2 = DogRetailer()
+    dogRetailer2.checkIff()             // here this obj is able to access NON interface f()
+
     val catRetailer: Retailer<Cat> = CatRetailer()
     catRetailer.sell()
     val petRetailer: Retailer<Pet> = CatRetailer()
@@ -20,11 +27,12 @@ class CatRetailer: Retailer<Cat>{
     }
 }
 class DogRetailer: Retailer<Dog>{
+    val size : Long = 60L
     override fun sell(): Dog {
         println("Sell Dog")
         return Dog("")
     }
-    fun checkIff() {            // NO
+    fun checkIff() {
         println("checking weather dogRetailer Obj could access this f() or not")
     }
 }

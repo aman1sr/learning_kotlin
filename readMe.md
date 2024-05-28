@@ -1,9 +1,19 @@
-### Todo:
--     for((index,c) in input.withIndex()){
-- filterIsInstance
-- 
+> readME 101  [bard](https://g.co/gemini/share/68b9b54da269)
+eg: 
+# My Library
 
+## Classes
 
+### MyClass
+*Explain what this class does*
+
+**Properties**
+* property1: Type - Description
+* property2: Type - Description
+
+**Methods**
+* method1(parameters): Return Type - Description
+* method2(parameters): Return Type - Description
 
 ### adventOfCode2021
 - day1.kt
@@ -22,7 +32,7 @@
 ### extensionFunction
 - 
 
-### higherOrderFunction
+### lambda_stuff
 - Functional.kt
 - HOF_any.kt
 - HOF_lambda.kt

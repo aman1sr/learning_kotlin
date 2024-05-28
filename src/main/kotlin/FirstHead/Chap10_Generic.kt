@@ -4,6 +4,7 @@ import kotlin.reflect.KClass
 
 fun main() {
 
+
     /*
     * Generic f()  eg>>
     * */
@@ -33,17 +34,8 @@ fun main() {
     println("pet Contest Winner is:${topPet.name}")
 }
 
-/*
-*  how the generic function works:
-*       1) The <T> after the fun keyword declares the generic type parameter T.
-*               It represents a type that will be determined at the time of function invocation.
-*       2) The parameter array: Array<T> indicates that the printArray function expects an array of type T.
-*       3) Inside the function, you can use the type parameter T to refer to the type of elements in the array.
-*
-* NOTE: why we added reified modifier:
-*            allows you to use the T::class syntax to access the class of the type parameter T at runtime, without using reified see f() printArray2
-* */
-private inline fun<reified T> printArray(array: Array<T>) {
+
+private inline fun<reified T> printArray(array: Array<T>) {     // reified: allows you to use the T::class syntax to access the class of the type parameter T at runtime, without using reified see f() printArray2
     val typeName = T::class.simpleName
     println("============== array Hash: ${array.contentHashCode()}====of type ${typeName} >>>${array.contentToString()}=====================")
     for (element in array) {
@@ -75,6 +67,7 @@ class Contest<T: Pet>{
             scores.put(t,score)
         }
     }
+    val list: MutableList<String> = mutableListOf()
     fun getWinners(): MutableSet<T>{
         val winners: MutableSet<T> = mutableSetOf()
         val highSore = scores.values.maxOf { it.toInt() }
@@ -95,6 +88,4 @@ class Contest<T: Pet>{
         }
         return winners
     }
-
-
 }

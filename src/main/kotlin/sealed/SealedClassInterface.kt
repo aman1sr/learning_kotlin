@@ -1,0 +1,5 @@
+package sealed
+
+fun main() {
+
+}

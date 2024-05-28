@@ -1,12 +1,14 @@
 package FirstHead
 
-var  mShoppintList = mutableListOf<String>("Tea", "Egg", "Milk","Egg")     // It's Mutable, ie, it got add/remove f()
+var mShoppintList = mutableListOf<String>("Tea", "Egg", "Milk", "Egg")     // It's Mutable, ie, it got add/remove f()
+
 data class Recipe2(val name: String)
+
 fun main() {
 
 //    checkLists()
 //    checkSet()
-checkMap()
+    checkMap()
 }
 
 fun checkMap() {
@@ -15,6 +17,7 @@ fun checkMap() {
     val r3 = Recipe2("Thai Curry")
     val r4 = Recipe2("Jambalaya")
     val r5 = Recipe2("Sausage Rolls")
+
     val mRecipeMap = mutableMapOf("Recipe1" to r1, "Recipe2" to r2, "Recipe3" to r3)
     println("mRecipeMap original: $mRecipeMap ")
     val recipesToAdd = mapOf("Recipe4" to r4, "Recipe5" to r5)
@@ -28,7 +31,7 @@ fun checkMap() {
 }
 
 fun checkSet() {
-  val mShoppingSet = mShoppintList.toMutableSet()
+    val mShoppingSet = mShoppintList.toMutableSet()
     println("mShoppingSet: $mShoppingSet")
     val moreShopping = setOf("Chives", "Spinach", "Milk")
     mShoppingSet.addAll(moreShopping)
@@ -46,15 +49,12 @@ fun checkLists() {
 
 
     if (mShoppintList.contains("Tea")) {
-        mShoppintList.set(mShoppintList.indexOf("Tea"),"Coffee")
+        mShoppintList.set(mShoppintList.indexOf("Tea"), "Coffee")
     }
 
     mShoppintList.sort()
     println("mShoppingList sorted: $mShoppintList")
     mShoppintList.reverse()
     println("mShoppingList reverse: $mShoppintList")
-
-
-
 
 }

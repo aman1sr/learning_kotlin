@@ -4,13 +4,19 @@ fun main() {
     val r1 = Recipe("Thai Curry", "Chiken")
     val r2 = Recipe(title = "Thai Curry2", ingredient =  "Veg",true)
     val r3 = r1.copy(title = "Chiken Bhuna")
+    val r4 = r1.copy()
+
     println("r1 hash code: ${r1.hashCode()}")
     println("r1 component1: ${r1.component1()}")
     println("r2 hash code: ${r2.hashCode()}")
     println("r3 hash code: ${r3.hashCode()}")
     println("r1 toString: ${r1.toString()}")
+
     println("r1 === r3? ${r1 === r3}")         // check obj identity
-    println("r1 == r2? ${r1 == r2}")            // checks obj equivalance
+    println("r1 === r3? ${r1 === r2}")         // false, beacuse they aren't referring to same object memory location
+
+    println("r1 == r4 ${r1 == r4}")            //true,  checks obj equivalance
+    println("r1.equals(r4) ${r1.equals(r4)}")  // true , works same as ==
 
     val (title, mainIngredient, vegetaraian, difficulty) = r1    // destructuring data objects
     println("the title: $title,mainIngredient: $mainIngredient, difficulty:$difficulty,  ")
