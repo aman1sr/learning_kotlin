@@ -25,8 +25,8 @@ fun main() {
         Grocery("Ice cream", FoodCategory.TYPE_FROZEN.type, "pack", 3.0, 2)
     )
 
-//    basicHOF(groceries)
-//      level2HOF(groceries)
+    basicHOF(groceries)
+      level2HOF(groceries)
          level3HOF(groceries)
 
 }
