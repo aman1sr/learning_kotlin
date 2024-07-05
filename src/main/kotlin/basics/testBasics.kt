@@ -6,6 +6,9 @@ fun main() {
     testEvisOperator()
 }
 class GenerateNo{
+//    val result = 10 + "90" + 100 + "Good" + 10 + 91 + "Morning" + 80 + 190
+
+
     val hunger:Int? = 100
     val learning:Int? = null
 }
